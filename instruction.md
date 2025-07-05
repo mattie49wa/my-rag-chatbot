@@ -258,7 +258,3 @@ Then check the job status:
 ```bash
 curl http://localhost:8080/jobs/{job_id}
 ```
-
-## License
-
-This project is created for the freeflow take-home assessment.
