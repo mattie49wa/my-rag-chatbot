@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "freeflow"
+version = "0.1.0"
+description = "Document Query API for freeflow"
+authors = ["sortknows <andybergknows@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+python-multipart = "^0.0.6"
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+httpx = "^0.25.2"
+PyPDF2 = "^3.0.1"
+pdfplumber = "^0.10.3"
+openai = "^1.6.1"
+langchain = "^0.1.0"
+tiktoken = "^0.5.2"
+faiss-cpu = "^1.7.4"
+sentence-transformers = "^3.0.1"
+numpy = "^1.24.3"
+celery = "^5.3.4"
+redis = "^5.0.1"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -2,6 +2,7 @@ fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 pydantic==2.5.0
+pydantic-settings==2.1.0
 httpx==0.25.2
 
 # For PDF processing
@@ -15,8 +16,11 @@ tiktoken==0.5.2
 
 # For vector store and embeddings
 faiss-cpu==1.7.4
-sentence-transformers==2.2.2
+sentence-transformers==2.7.0
+transformers==4.40.0
+huggingface-hub==0.23.0
 numpy==1.24.3
+torch==2.1.0
 
 # For async processing
 celery==5.3.4

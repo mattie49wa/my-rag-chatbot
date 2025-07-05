@@ -29,3 +29,4 @@ temp/
 
 # Docker
 .dockerignore 
+__init__.py
