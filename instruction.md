@@ -103,7 +103,7 @@ Response (when completed):
       "chunks_used": 5,
       "total_chunks": 120,
       "documents_processed": 2,
-      "model_used": "gpt-3.5-turbo"
+      "model_used": "gpt-4o"
     }
   }
 }

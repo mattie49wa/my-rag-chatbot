@@ -9,7 +9,7 @@ httpx==0.25.2
 PyPDF2==3.0.1
 pdfplumber==0.10.3
 
-# For LLM integration (we'll use OpenAI)
+# For LLM integration
 openai==1.6.1
 langchain==0.1.0
 tiktoken==0.5.2

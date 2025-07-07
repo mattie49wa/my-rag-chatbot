@@ -10,7 +10,7 @@ class QueryProcessor:
     def __init__(self):
         self.pdf_processor = PDFProcessor()
         self.text_chunker = TextChunker()
-        self.vector_store = None  # Lazy load to avoid model download on startup
+        self.vector_store = None
         self.llm_service = None
 
     def _get_vector_store(self):
@@ -62,7 +62,6 @@ class QueryProcessor:
 
             print("Step 4: Searching for relevant chunks...")
             relevant_chunks = vector_store.search(query, top_k=settings.top_k_chunks)
-            print("---->", relevant_chunks)
             if not relevant_chunks:
                 return {
                     "answer": "No relevant information found in the documents for your query.",
@@ -73,7 +72,7 @@ class QueryProcessor:
             print("Step 5: Generating answer...")
             llm_service = self._get_llm_service()
             result = await llm_service.generate_answer(query, relevant_chunks)
-            print("---->", result)
+
             # Step 6: Validate answer (Enhancement 1)
             confidence_note = None
             if validate:

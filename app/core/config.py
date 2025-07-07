@@ -9,7 +9,7 @@ class Settings(BaseSettings):
 
     # OpenAI Settings
     openai_api_key: Optional[str] = None
-    openai_model: str = "gpt-3.5-turbo"
+    openai_model: str = "gpt-4o"
 
     # Embedding Settings
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
@@ -26,8 +26,6 @@ class Settings(BaseSettings):
     max_pdf_size_mb: int = 50
     pdf_download_timeout: int = 30
 
-    # Redis Settings (for async jobs)
-    redis_url: str = "redis://localhost:6379"
 
     class Config:
         env_file = ".env"

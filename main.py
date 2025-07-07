@@ -26,7 +26,6 @@ app.add_middleware(
 )
 
 
-# Pydantic models
 class QueryRequest(BaseModel):
     query: str
     document_urls: List[HttpUrl]
@@ -49,10 +48,8 @@ class JobStatusResponse(BaseModel):
     error: Optional[str] = None
 
 
-# In production, use Redis or a database
 jobs: Dict[str, Dict] = {}
 
-# Query processor will be initialized on first use
 _query_processor = None
 
 
